@@ -33,7 +33,11 @@ def main() -> None:
     """Compare block height and utxos for a set of addresses against different chain sources"""
     
     ticker = "SYS"
-    addresses = ["Sg8iK3iRB5m8x4uzY7JinoKKvcRwTXidop", "SNydEuejwkVy8WRCaQgqrvXZw4bA1hVYHg", "ScGBGjpAoFKdDBkq8efWSMz7LapJqqQM8Y"]
+    addresses = [
+        "Sg8iK3iRB5m8x4uzY7JinoKKvcRwTXidop",
+        "SNydEuejwkVy8WRCaQgqrvXZw4bA1hVYHg",
+        "ScGBGjpAoFKdDBkq8efWSMz7LapJqqQM8Y"
+    ]
 
     # configure sources
     sources = list()
