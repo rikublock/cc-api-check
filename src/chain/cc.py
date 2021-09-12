@@ -33,6 +33,7 @@ class CloudChains(ChainSource):
         r = requests.get(url)
         r.raise_for_status()
         result = r.json()
+        log.debug(pprint.pformat(result))
         result = result["result"]
 
         return int(result[ticker.upper()])

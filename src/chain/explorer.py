@@ -40,7 +40,10 @@ class ChainzExplorer(ChainSource):
 
         r = requests.get(url, params=params)
         r.raise_for_status()
-        return int(r.json())
+        result = r.json()
+        log.debug(pprint.pformat(result))
+
+        return int(result)
 
     def get_utxos(self, ticker: str, addresses: Union[set, list, tuple]) -> List[UTXO]:
         """Requests unspent outputs (UTXO) for a set of addresses
